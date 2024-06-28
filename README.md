@@ -28,12 +28,15 @@ sudo nmap -sV < ip-адрес >
 
 ## **Решение 1**
 
-- ![scrinshot](https://github.com/Evgenii-379/13-03.md/blob/main/Снимок%20экрана%202024-06-27%20115458.png)
+- ![scrinshot](https://github.com/Evgenii-379/13-03.md/blob/main/Снимок%20экрана%202024-06-28%20002644.png)
+- ![scrinshot](https://github.com/Evgenii-379/13-03.md/blob/main/Снимок%20экрана%202024-06-28%20002738.png)
+
 
 nmap в 4 режимах сканирования показывает что порты 22, 80, 443 закрыты
 
 Логи в Suricata:
-- ![scrinshot](https://github.com/Evgenii-379/13-03.md/blob/main/Снимок%20экрана%202024-06-26%20002010.png)
+- ![scrinshot](https://github.com/Evgenii-379/13-03.md/blob/main/Снимок%20экрана%202024-06-28%20002459.png)
+
 
 При сканировании в режиме -sA (агресивное сканирование)- определенно возможное имя атакуещего хоста Kali Linux в пакете запроса DHCP. Классификация:
 потенциальное нарушение корпоративной конфиденциальности.Приоретет 1
@@ -49,7 +52,7 @@ nmap в 4 режимах сканирования показывает что п
 В итоге при сканировании, логи в журнале suricata показали потенциально плохой трафик. 
 
 Логи в file2ban:
-- ![scrinshot](https://github.com/Evgenii-379/13-03.md/blob/main/Снимок%20экрана%202024-06-26%20002026.png)
+- ![scrinshot](https://github.com/Evgenii-379/13-03.md/blob/main/Снимок%20экрана%202024-06-28%20002531.png)
 
 В логах журналах file2ban особо подозрительных действий не обнаруженно
 
@@ -82,8 +85,6 @@ hydra -L users.txt -P pass.txt < ip-адрес > ssh
 
 В логах журнала  file2ban ничего подозрительного не видно
  
-- ![scrinshot](https://github.com/Evgenii-379/13-03.md/blob/main/Снимок%20экрана%202024-06-27%20105309.png)
-- ![scrinshot](https://github.com/Evgenii-379/13-03.md/blob/main/Снимок%20экрана%202024-06-27%20112435.png)
-- ![scrinshot](https://github.com/Evgenii-379/13-03.md/blob/main/Снимок%20экрана%202024-06-27%20105347.png)
-
+- ![scrinshot](https://github.com/Evgenii-379/13-03.md/blob/main/Снимок%20экрана%202024-06-28%20004545.png)
+- ![scrinshot](https://github.com/Evgenii-379/13-03.md/blob/main/Снимок%20экрана%202024-06-28%20010702.png)
 
